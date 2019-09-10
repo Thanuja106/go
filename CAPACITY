@@ -1,0 +1,29 @@
+package main
+
+ 
+
+import "fmt"
+
+ 
+
+func main() {
+    a := make([]int, 5, 5) // 0 0 0 0 0 , 5, 5
+    printSlice("a", a)
+
+ 
+
+    b := make([]int, 0, 5) // [] len=0 cap=5
+    printSlice("b", b)
+
+ 
+
+    c := b[1:2]                // [0] len=1 cap= [lower:cap(parent slice)] 
+    //0 b(1) 2 3 4 b(5)                            //[1:cap(b)]
+                                                //[1:5] --> 4
+    printSlice("c", c) //4
+
+ 
+
+    d := c[2:4]                // [0 0] len=2  cap= 2:4
+    printSlice("d", d)
+}
