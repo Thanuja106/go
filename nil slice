@@ -1,0 +1,20 @@
+package main
+
+ 
+
+import "fmt"
+
+ 
+
+func main() {
+    var s []int //nil
+    var s2 =[]int{} // not nil
+    fmt.Println(s, len(s), cap(s))
+    fmt.Println(s2, len(s2), cap(s2))
+    if s == nil {
+        fmt.Println("nil for S!")
+    }
+    if s2 == nil {
+        fmt.Println("nil for S2!")
+    }
+}
