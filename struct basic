@@ -8,5 +8,5 @@ func main() {
    num int
    }
    var  p Person// and declaring a struct ....here person is a type 
-   fmt.Println(p)
+   fmt.Println(p)//ouput{  0}
 }
