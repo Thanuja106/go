@@ -1,0 +1,14 @@
+package main
+
+import "fmt"
+
+func main() {
+ char:=[]string{"a","b","c",new()}
+ char=append(char, "e")
+new:=[]string{"thanuja","courses"}
+char=append(char, new...)
+fmt.Println(char)
+}
+func new() string{
+  return "d"
+}
