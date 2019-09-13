@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+
+func main() {
+ a:=[6]int{1,2,3}
+ var b [] int
+b=a/*cannot intiliaze with different size 
+      a:=[]int{1,233}
+      b:=[]int{23.656} its correct*/
+fmt.Println(b)
+}
