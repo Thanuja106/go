@@ -1,0 +1,15 @@
+package main
+
+import "fmt"
+func main(){
+  monic:=struct{//anonymous struct
+    firstname string
+    num int
+  }{
+    firstname:"ghjd",
+    num:3,
+  }
+    
+  
+fmt.Println(monic)
+}
