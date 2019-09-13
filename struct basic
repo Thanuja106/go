@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+
+func main() {
+ type Person struct{
+   first,last string
+   num int
+   }
+   var  p Person// and declaring a struct ....here person is a type 
+   fmt.Println(p)
+}
