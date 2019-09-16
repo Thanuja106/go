@@ -29,3 +29,13 @@ func main(){
 }
 output will be:
 it is 30 or 10 or 76
+/--------------------------------------------------------------------------/
+package main
+
+import "fmt"
+func main(){
+  fmt.Printf("it is %[2]d or %[1]d or %[3]d \n",10,30,76)
+  fmt.Printf("%*d",10,10)//it is printing like with 1 padding distance printing 10
+}
+output like
+            10
