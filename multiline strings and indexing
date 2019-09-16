@@ -1,0 +1,31 @@
+package main
+
+import "fmt"
+/*var s=`
+hello everyone
+happy 
+wishing to you
+regards me
+
+`*/
+var p int
+func main() {
+  var s=`
+hello everyone
+happy 
+wishing to you
+regards me
+`
+  fmt.Println(s)
+  fmt.Println(p)
+}
+/-------------------------------------------------------------------/
+**this for indexing**
+package main
+
+import "fmt"
+func main(){
+  fmt.Printf("it is %[2]d or %[1]d or %[3]d",10,30,76)
+}
+output will be:
+it is 30 or 10 or 76
