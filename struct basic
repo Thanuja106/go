@@ -10,3 +10,34 @@ func main() {
    var  p Person// and declaring a struct ....here person is a type 
    fmt.Println(p)//ouput{  0}
 }
+/---------------------------------------------------------------------------------------------/
+instance of structs
+package main
+import "fmt"
+type a struct{
+  len int
+  brd int
+  color string
+       geometry struct{
+         area int
+         perimeter int
+       }
+    
+}
+func main() {
+  var rec a
+  rec.len=90
+  rec.brd=100                                                          
+  rec.color="red"
+     rec.geometry.area=rec.len*rec.brd
+     rec.geometry.perimeter=rec.len+2*rec.brd+1
+     fmt.Println(rec)
+     fmt.Println(rec.geometry.perimeter)
+     fmt.Println(rec.geometry.area)
+ }
+ output:
+{90 100 red {9000 291}}
+291
+9000
+
+                                                                                           
