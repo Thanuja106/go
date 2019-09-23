@@ -44,3 +44,19 @@ func main() {
   fmt.Println(a[0].name,a[0].rank,"\n",a[1])
 
 }
+/-----------------------------------------------------------------------------------------------/
+var opts = []struct {//another way
+    shortnm      byte
+    longnm, help string
+    needArg      bool
+}{
+    {'a', "multiple", "Usage for a", false},
+    {
+        shortnm: 'b',
+        longnm:  "b-option",
+        needArg: false,
+        help:    "Usage for b",
+    },
+}
+
+
