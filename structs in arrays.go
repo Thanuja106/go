@@ -24,3 +24,23 @@ func main(){
 
     }
   }
+
+
+/-------------------------------------------------------------------------------------------/
+package main//another way of struct in arrays
+
+import "fmt"
+
+type ex struct{
+  name string
+  rank int
+}
+func main() {
+  var a [] ex
+  cls1:=ex{"aa",1}
+  cls2:=ex{"bb",2}
+  a=append(a,cls1)
+  a=append(a,cls2)
+  fmt.Println(a[0].name,a[0].rank,"\n",a[1])
+
+}
