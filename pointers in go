@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+
+func main() {
+a:=10
+var p *int
+p=&a
+*p=90
+fmt.Println("the value of %d %d",*p,a)
+}
+                                                     output:90 90
