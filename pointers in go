@@ -40,3 +40,55 @@ fmt.Printf("%d %d",p,*p)
 }
 output:
 824634327056 0
+/-------------------------------------------------------------------------------------------------
+
+package main
+
+import "fmt"
+
+func main() {
+  
+  p:=10
+ 
+  change(p)
+fmt.Println(p)
+}
+func change(a int){
+  a=20
+  
+}
+
+output:10 //here the value will not change 
+ /----------------------------------------------------------------------------------------
+package main
+
+import "fmt"
+
+func main() {
+  
+  a:=10
+  p:=&a 
+  change(p)
+fmt.Println(a)
+}
+func change(a *int){
+  *a=20
+  }
+  output:20//here the value will change
+   /----------------------------------------------------------------------------------------
+ another way of declaring pointer in function
+ package main
+
+import "fmt"
+
+func main() {
+  p:=10
+  change(&p)
+fmt.Println(p)
+}
+func change(a *int){
+  *a=20
+  
+}
+  output:20
+  /-------------------------------------------------------------------------------------------------
