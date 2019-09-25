@@ -37,3 +37,17 @@ func main() {
 }
 OUTPUT:
 hello
+/---------------------------------------------------------------------------------------------------
+package main
+
+import "fmt"
+
+func main() {
+  fs:=func(f string){
+    fmt.Println(f)
+  }
+  fs("hai")
+
+}
+OUTPUT:
+hai
