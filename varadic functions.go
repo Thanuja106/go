@@ -21,3 +21,18 @@ OUTPUT:
 [1 2] 3
 [1 2 3] 6
 [3 4 5 67 7] 86
+/-----------------------------------------------------------------------------
+package main
+import "fmt"
+func main() {
+  add(1,2,3,4)
+  }
+func add(num...int){
+  t:=0
+  for _,n:=range num{
+    t=t+n
+}
+fmt.Println(t)
+}
+OUTPUT
+10
