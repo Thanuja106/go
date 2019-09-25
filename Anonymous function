@@ -11,3 +11,16 @@ func main() {
   }
   OUTPUT:
   12.25
+/-----------------------------------------------------------------------------------
+package main
+
+import "fmt"
+
+func main() {
+  
+ add(12)
+ func add(a int){----->if we write like this we will get error
+   fmt.Println(a*a)
+ }
+  
+  }
