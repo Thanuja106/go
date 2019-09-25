@@ -22,5 +22,18 @@ func main() {
  func add(a int){----->if we write like this we will get error
    fmt.Println(a*a)
  }
-  
   }
+OUTPUT:
+144
+/------------------------------------------------------------------------------------------
+package main
+
+import "fmt"
+var f=func (s string){
+fmt.Println("h"+s)
+}
+func main() {
+  f("ello")
+}
+OUTPUT:
+hello
