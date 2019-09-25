@@ -13,5 +13,5 @@ p.x=23//we can write this *p.X or p.x
 fmt.Println(v)
 }
 OUTPUT:
-&{23,2}
-{23,2}
+&{23 2}
+{23 2}
