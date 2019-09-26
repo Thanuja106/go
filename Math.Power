@@ -23,3 +23,48 @@ func main() {
 }
  
 }
+/--------------------------------------------------------------------------------------------
+package main
+
+import "fmt"
+
+func main() {
+  var num,pow float64
+  var i float64=1
+  k:=i
+  fmt.Println("enter number,power")
+  fmt.Scan(&num,&pow)
+  if num>0&&pow>0 {
+      fmt.Println("both postive")
+  for i=1;i<=pow;i++{
+    k=k*num
+  }
+   fmt.Println(k)
+  }else if num>0&&pow<0{
+    pow=-pow
+     fmt.Println(" one num positive")
+for i=1;i<=pow;i++{
+    k=k*num
+  }
+  k=1/k
+  fmt.Println(k)
+  }else if num<0&&pow>0{
+     fmt.Println("pow positive")
+    num=-num
+    for i=1;i<=pow;i++{
+    k=(k*num)
+  }
+ fmt.Println("neg",(-k))
+}else{
+   fmt.Println("both negitive")
+    num=-num
+    pow=-pow
+    for i=1;i<=pow;i++{
+    k=(k*num)
+    }
+  fmt.Println("enter")
+  k=1/(-k)
+ fmt.Println("neg",(k))
+}
+ 
+}
