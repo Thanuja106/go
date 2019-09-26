@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func main() {
+  var num,pow int
+  var i int=1
+  k:=i
+  fmt.Println("enter number,power")
+  fmt.Scan(&num,&pow)
+  if num>0{
+      fmt.Println("enter number,power")
+  for i=1;i<=pow;i++{
+    k=k*num
+  }
+   fmt.Println(k)
+  }else{
+    num=-num
+    for i=1;i<=pow;i++{
+    k=(k*num)
+  }
+ fmt.Println("k",(-k))
+}
+ 
+}
