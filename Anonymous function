@@ -71,6 +71,6 @@ fmt.Println(res)
 }
 OUTPUT:
 1st
-3rd
 2nd
+3rd
 63
