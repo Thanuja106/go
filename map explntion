@@ -134,8 +134,25 @@ OUTPUT:
 map[classes:10 roll no:1]
 roll no 1
 classes 10
+/===============================================================================================
+package main
 
+import "fmt"
 
+func main() {
+  var ages map[string]string
+
+age:=map[string]string{
+"ha":"jfg",
+"jrjh":"jhugfhr",
+
+}
+ages=age
+delete(ages,"ha")
+fmt.Println(age,ages)
+}
+output:
+map[jrjh:jhugfhr] map[jrjh:jhugfhr]
 
 
 
