@@ -112,7 +112,28 @@ to find length of the map
 fmt.Println(len(age))
 /=====================================================================================
 here we wont use cap in map..
+/=================================
+DELETE FUNCTION
+package main
 
+import "fmt"
+
+func main() {
+ age:= map[string]int{
+   "students":50,
+   "roll no":1,
+   "classes":10,
+ }
+ delete(age,"students")
+ fmt.Println(age)
+for i,value:=range age{
+  fmt.Println(i,value)
+}
+}
+OUTPUT:
+map[classes:10 roll no:1]
+roll no 1
+classes 10
 
 
 
