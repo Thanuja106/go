@@ -88,4 +88,30 @@ func main() {
 }
 OUTPUT"
 50 0
-  
+/------------------------------------------------------------------------------------
+So, to check if a key exists in the map or not, go provide another syntax which returns 2 values.
+value, ok := m[key]
+example:
+package main
+
+import "fmt"
+
+func main() {
+ age:= map[string]int{
+   "students":50,
+   "roll no":1,
+   "classes":10,
+ }
+minage,right:=age["students"]
+fmt.Println(minage,right)
+}
+output:
+50 true
+
+
+
+
+
+
+
+
