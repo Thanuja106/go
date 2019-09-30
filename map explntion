@@ -29,3 +29,31 @@ goroutine 1 [running]:
 main.main()
     /home/runner/main.go:8 +0xa5
 exit status 2
+/---------------------------------------------------------------------------
+package main
+
+import "fmt"
+
+func main() {
+  var age=make(map[string]int)
+  fmt.Println(age)
+  }
+  output:map[]
+  /----------------------------------------------------------------------------------
+  package main
+
+import "fmt"
+
+func main() {
+  var age=make(map[string]int)
+  fmt.Println(age)
+  age["roll no"]=13
+fmt.Println(age)
+output:
+map[]
+map[roll no:12]
+/-----------------------------------------------------------------
+  
+  
+  
+  
