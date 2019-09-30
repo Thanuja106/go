@@ -1,1 +1,3 @@
 A map is like an apartment complex with many rooms. Every room has a key and key is necessary to find out what’s inside that room. Key can be made of any fixed material (data type) and a room can contain any fixed material (data type).
+ What is a map?
+A map is like an array except, instead of an integer index, you can have string or any other data types as key
