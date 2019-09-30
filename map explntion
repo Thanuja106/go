@@ -1,3 +1,31 @@
 A map is like an apartment complex with many rooms. Every room has a key and key is necessary to find out what’s inside that room. Key can be made of any fixed material (data type) and a room can contain any fixed material (data type).
  What is a map?
 A map is like an array except, instead of an integer index, you can have string or any other data types as key
+example:
+package main
+
+import "fmt"
+
+func main() {
+  var m map[string]int
+  fmt.Println(m)
+}
+output:map[]
+/----------------------------------------------------------------------------
+package main
+
+import "fmt"
+
+func main() {
+  var m map[string]int
+  fmt.Println(m)
+   m["name"]=20
+   fmt.Println(m)
+}
+output:
+panic: assignment to entry in nil map
+
+goroutine 1 [running]:
+main.main()
+    /home/runner/main.go:8 +0xa5
+exit status 2
