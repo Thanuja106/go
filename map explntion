@@ -107,7 +107,11 @@ fmt.Println(minage,right)
 }
 output:
 50 true
-
+/-----------------------------------------------------
+to find length of the map
+fmt.Println(len(age))
+/=====================================================================================
+here we wont use cap in map..
 
 
 
