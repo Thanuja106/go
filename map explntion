@@ -53,7 +53,22 @@ output:
 map[]
 map[roll no:12]
 /-----------------------------------------------------------------
-  
+  WE CAN ASSIGN LIKE THIS
+  package main
+
+import "fmt"
+
+func main() {
+ age:= map[string]int{//we cant write like this i,e.var age map[string]int{
+                                                                            -----}
+   "students":50,
+   "roll no":1,
+   "classes":10,
+ }
+ fmt.Println(age)
+}
+OUTPUT
+map[classes:10 roll no:1 students:50]
   
   
   
