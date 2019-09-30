@@ -69,6 +69,23 @@ func main() {
 }
 OUTPUT
 map[classes:10 roll no:1 students:50]
-  
-  
+/--------------------------------------------------------------------------------
+Accessing map data:-
+In case array or slice, when you are trying to access out of index element (when the index does not exist), go will throw an error.
+But not in case of map. When you are trying to access the value by the key which is not present in the map, go will not throw an error, 
+instead, it will return zero value of valueType
+package main
+
+import "fmt"
+
+func main() {
+ age:= map[string]int{
+   "students":50,
+   "roll no":1,
+   "classes":10,
+ }
+ fmt.Println(age["students"],age["john"])
+}
+OUTPUT"
+50 0
   
