@@ -154,7 +154,7 @@ fmt.Println(age,ages)
 output:when copy into another variable the changes will be reflect
 map[jrjh:jhugfhr] map[jrjh:jhugfhr]
 /================================================================================
-package main
+package main//COPYING BUT WHEN WE MADE CHANGES NOTHING WILL REFLECT ON ORGINAL ONE
 
 import "fmt"
 
