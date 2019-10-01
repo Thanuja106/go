@@ -114,7 +114,7 @@ fmt.Println(len(age))
 here we wont use cap in map..
 /=================================
 DELETE FUNCTION
-package main//copying into another variable
+package main
 
 import "fmt"
 
@@ -135,7 +135,7 @@ map[classes:10 roll no:1]
 roll no 1
 classes 10
 /===============================================================================================
-package main
+package main//copying into another variable
 
 import "fmt"
 
@@ -151,9 +151,27 @@ ages=age
 delete(ages,"ha")
 fmt.Println(age,ages)
 }
-output:
+output:when copy into another variable the changes will be reflect
 map[jrjh:jhugfhr] map[jrjh:jhugfhr]
+/================================================================================
+package main
 
+import "fmt"
 
+func main() {
+ var agescopied=make(map[string]int)
+ age:=map[string]int{
+"hai":1,
+"hello":2,
+ }
+ for index,value:=range age{
+   agescopied[index]=value
+ }
+ delete(agescopied,"hai")
+ fmt.Println("age",age,"agescopied",agescopied)
+}
+
+OUTPUT:
+age map[hai:1 hello:2] agescopied map[hello:2]
 
 
