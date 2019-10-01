@@ -173,5 +173,18 @@ func main() {
 
 OUTPUT:
 age map[hai:1 hello:2] agescopied map[hello:2]
-
+/==================================================================
+package main
+import "fmt"
+func main() {
+pusername:=map[string]string{
+   "hai":"hello",
+   "mrng":"nyt",
+ }
+pusername["go"]="went"
+ fmt.Println(pusername)
+  }
+  output:
+  map[go:went hai:hello mrng:nyt]
+  
 
