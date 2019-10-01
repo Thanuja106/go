@@ -114,7 +114,7 @@ fmt.Println(len(age))
 here we wont use cap in map..
 /=================================
 DELETE FUNCTION
-package main
+package main//copying into another variable
 
 import "fmt"
 
