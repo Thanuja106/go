@@ -174,6 +174,8 @@ func main() {
 OUTPUT:
 age map[hai:1 hello:2] agescopied map[hello:2]
 /==================================================================
+//this is of adding key value pair to map 
+
 package main
 import "fmt"
 func main() {
@@ -186,5 +188,6 @@ pusername["go"]="went"
   }
   output:
   map[go:went hai:hello mrng:nyt]
-  
-
+  /========================================================================
+what is err?in go lang
+suppose if we are try to open an file if it exits it returns nil value otherwise it returns non nil value
