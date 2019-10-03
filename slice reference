@@ -19,3 +19,51 @@ func main() {
     fmt.Println(a, b)
     fmt.Println(names)
 }
+/===========================================================================
+package main
+
+import "fmt"
+
+type user struct {
+	id   int
+	name string
+}
+
+func main() {
+
+	// Declare and initialize a value of type user.
+	u1 := user{
+		id:   1432,
+		name: "Betty",
+	}
+
+	// Declare and initialize a value of type user.
+	u2 := user{
+		id:   4367,
+		name: "Janet",
+	}
+
+	// Display both user values.
+	display(u1, u2)
+	
+	// Create a slice of user values.
+	u3 := []user{
+		{24, "Bill"},
+		{32, "Lisa"},
+	}
+	
+	// Display all the user values from the slice.
+	display(u3...)
+}
+
+// display can accept and display multiple values of user types.
+func display(users ...user) {
+	for _, u := range users {
+		fmt.Printf("%+v\n", u)
+	}
+}
+output:
+{id:1432 name:Betty}
+{id:4367 name:Janet}
+{id:24 name:Bill}
+{id:32 name:Lisa}
