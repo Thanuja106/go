@@ -1,0 +1,33 @@
+package main
+
+import "fmt"
+type shape interface{
+  area()int
+  perimeter()int
+}
+func main() {
+  var s shape
+  fmt.Println("area",s)
+ }
+ OUTPUT:
+ area <nil>
+ /====================================================================================
+ package main
+
+import "fmt"
+type shape interface{
+  area()int
+  perimeter()int
+}
+func main() {
+  var s shape
+  fmt.Println("area",s.area())
+}
+--->output ispanic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x487193]
+
+goroutine 1 [running]:
+main.main()
+    /home/runner/main.go:10 +0x23
+exit status 2
+/====================================================================================
