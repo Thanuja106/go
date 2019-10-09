@@ -31,3 +31,29 @@ main.main()
     /home/runner/main.go:10 +0x23
 exit status 2
 /====================================================================================
+package main
+
+import "fmt"
+type shape interface{
+  area() float32
+  perimeter() float32
+}
+type  measure struct{
+  width float32
+  breadth float32
+} 
+func(m measure)area()float32{
+  return m.width*m.breadth
+}
+func(m measure)perimeter()float32{
+  return m.width*2+m.breadth*2
+}
+func main() {
+  var s shape
+   s=measure{3.2,2.5}
+   r:=measure{3.2,52.5}
+   fmt.Println(s.area(),s.perimeter(),r)
+}
+output:
+8 11.4 {3.2 52.5}
+/==========================================================================================
