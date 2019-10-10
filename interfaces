@@ -31,7 +31,7 @@ main.main()
     /home/runner/main.go:10 +0x23
 exit status 2
 /====================================================================================
-package main
+package main//1st way interfaces
 
 import "fmt"
 type shape interface{
@@ -57,3 +57,58 @@ func main() {
 output:
 8 11.4 {3.2 52.5}
 /==========================================================================================
+package main//2nd way of interface
+
+import "fmt"
+type I interface{
+  m()string
+}
+type t struct{
+  name string
+}
+func(t1 t)m()string{
+  return t1.name
+}
+func hello(i I){
+  fmt.Println(i.m())
+}
+func main() {
+  hello(t{"hai"})
+}
+OUTPUT:
+hai
+/==================================================================================================
+package main//3rd way of writing interfaces
+
+import "fmt"
+type I interface{
+  m()string
+}
+type t struct{
+  name string
+}
+func(t1 t)m()string{
+  return t1.name
+}
+func hello(i I){
+  fmt.Println(i.m())
+}
+func main() {
+ tt:=t{"hai"}
+ hello(tt)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
