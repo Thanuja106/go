@@ -97,7 +97,70 @@ func main() {
  tt:=t{"hai"}
  hello(tt)
 }
+output:hai
+/===================================================================================================
+type  shape interface{
+  m1()int
+}
+type  object interface{
+  m2()int
+}
+type   cube struct{
+  side int
+}
+func main(){
+  var s shape
+  var  o object
+  s=cube{10}//here it is the big process to implement the interfaces instead of this we can write below as follows
+  o=cube{20}
+  f(s)
+  f1(o)
+}
+func(c cube)m1()int{
+  return c.side+2
+}
+func(c cube)m2()int{
+  return c.side+20
+}
+func f(s shape){
+  fmt.Println(s.m1())
+}
+func f1(o object){
+  fmt.Println(o.m2())
+OUTPUT:
+12
+40
+/========================================================================================
+package main
 
+import "fmt"
+type shape interface{
+  m1()int
+}
+type object interface{
+  m2()int
+}
+type cube struct{
+  side int
+}
+
+func main(){
+  var s shape=cube{10}
+   c:=s.(cube)///////////like this
+   value,ok:=s.(cube)
+   fmt.Println(value,ok)
+    fmt.Println("m1",c.m1(),c.m2())
+}
+func(c cube)m1()int{
+return c.side+2
+}
+func(c cube)m2()int{
+return c.side+28
+}
+OUTPUT:
+{10} true
+m1 12 38
+/====================================================================================================
 
 
 
