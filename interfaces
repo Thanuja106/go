@@ -184,8 +184,34 @@ OUTPUT:
 98.98 true 98.98
 0 false helo
 /====================================================================================================
+SWITCH CASE:
+package main
 
+import "fmt"
 
+func main() {
+  myfunc("hello")
+  myfunc(76)
+  myfunc(true)
+}
+func myfunc(a interface{}){
+  switch a.(type){
+    case int:
+    fmt.Println("the type",a.(int) )
+    case float32:
+    fmt.Println("the type is",a.(float32))
+    case string:
+    fmt.Println("the type  is",a.(string))
+    default:
+    fmt.Println("type not found")
+  }
+
+}
+OUTPUT:
+the type  is hello
+the type 76
+type not found
+/====================================================================================================
 
 
 
