@@ -161,8 +161,29 @@ OUTPUT:
 {10} true
 m1 12 38
 /====================================================================================================
+TYPE ASSERTIONS
+package main
 
+import "fmt"
 
+func main() {
+var val interface{
+  }=98.98
+  myfunc(val) 
+  var val1 interface{
+  }="helo"
+  myfunc(val1)
+  //fmt.Println("type of the interface %T",)
+}
+func myfunc(a interface{}){
+  value,ok:=a.(float64)
+  fmt.Println(value,ok,a)
+  
+}
+OUTPUT:
+98.98 true 98.98
+0 false helo
+/====================================================================================================
 
 
 
