@@ -252,8 +252,8 @@ type i1 interface{
   m2()
 }
 type final interface{
-  i
-  i1
+  i or m1()
+  i1 or m2()
 }
 type str struct{
   name string
