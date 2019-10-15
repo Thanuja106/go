@@ -212,11 +212,68 @@ the type  is hello
 the type 76
 type not found
 /====================================================================================================
+EMBEDDING INTERFACES
+package main
 
+import "fmt"
+type i interface{
+  m1() string
+}
+type i1 interface{
+  m2() int
+}
+type s struct{
+  name string
+  number int
+}
+func(str s)m1()string{
+return str.name
+}
+func(str1 s)m2()int{
+return str1.number
+}
+func main() {
+ var inter i
+var in i1
+ inter=s{"hello",90}
+in=s{"hai",100}
+ fmt.Println(inter.m1(),in.m2())
+}
+OUTPUT:
+Hello 90
+INSTEAD OF ABOVE ONE WE CAN WRITE LIKE THIS AS FOLLOWS:
+package main
 
-
-
-
+import "fmt"
+type i interface{
+  m1()
+}
+type i1 interface{
+  m2()
+}
+type final interface{
+  i
+  i1
+}
+type str struct{
+  name string
+  number int
+}
+func main() {
+ values:=str{"hello",80}
+ var f final=values
+ f.m1()
+ f.m2()
+}
+func(s str)m1(){
+  fmt.Println(s.name)
+}
+func(s str)m2(){
+  fmt.Println(s.number)
+}
+OUTPUT:
+Hello 
+80
 
 
 
