@@ -241,6 +241,7 @@ in=s{"hai",100}
 }
 OUTPUT:
 Hello 90
+//===============================================================================================================
 INSTEAD OF ABOVE ONE WE CAN WRITE LIKE THIS AS FOLLOWS:
 package main
 
@@ -252,8 +253,8 @@ type i1 interface{
   m2()
 }
 type final interface{
-  i or m1()
-  i1 or m2()
+  i                                or m1()
+  i1                               or m2()
 }
 type str struct{
   name string
@@ -262,8 +263,8 @@ type str struct{
 func main() {
  values:=str{"hello",80}
  var f final=values
- f.m1()
- f.m2()
+ f.m1()                         
+ f.m2()                    
 }
 func(s str)m1(){
   fmt.Println(s.name)
@@ -274,7 +275,11 @@ func(s str)m2(){
 OUTPUT:
 Hello 
 80
-
+EXPLAINATION:
+As shown in the above example we have three interfaces. Interface 1 and 2 are simple interfaces and interface 3 is the embedded interface
+which holds both 1 and 2 interfaces in it. So if any changes take place in the interface 1 and interface 2 will reflect in interface 3. 
+And interface 3 can access all the methods present in interface 1 and 2.
+/====================================================================================================
 
 
 
