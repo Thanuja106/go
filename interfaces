@@ -280,7 +280,46 @@ As shown in the above example we have three interfaces. Interface 1 and 2 are si
 which holds both 1 and 2 interfaces in it. So if any changes take place in the interface 1 and interface 2 will reflect in interface 3. 
 And interface 3 can access all the methods present in interface 1 and 2.
 /====================================================================================================
+EMPTY INTERFACE
+package main
 
-
+import "fmt"
+type body struct{
+  msg interface{}
+}
+func main() {
+  b:=body{}
+  b.msg="5"
+  fmt.Println(b.msg)
+}
+OUTPUT:
+5
+/====================================================================================================
+EMPTY INTERFACES
+package main
+func main() {
+	var i int8 = 1
+	read(i)
+}
+//go:noinline
+func read(i interface{}) {
+	println(i)
+}
+OUTPUT:
+(0x45abe0,0x4bf481)
+//=====================================================================================================
+package main
+import "fmt"
+func main() {
+	var i int8 = 1
+	read(i)
+}
+//go:noinline
+func read(i interface{}) {
+	fmt.Println(i)
+}
+OUTPUT:
+1
+/=================================================================================================
 
 
